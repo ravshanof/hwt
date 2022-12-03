@@ -5,7 +5,7 @@ Create and verify JWTs with hex-based keys
 
 ### Generate HexKey
 
-```
+```ts
 import { generateHex } from 'https://deno.land/x/hwt/mod.ts';
 
 
@@ -22,7 +22,7 @@ console.log(HEX_KEY);
 
 ### Sign JWT
 
-```
+```ts
 import { sign } from 'https://deno.land/x/hwt/mod.ts';
 
 const HEX_KEY = Deno.env.get("HEX_KEY");
@@ -35,7 +35,7 @@ const jwt = await sign(HEX_KEY, payload);
 
 ### Verify JWT
 
-```
+```ts
 import { sign } from 'https://deno.land/x/hwt/mod.ts';
 
 const HEX_KEY = Deno.env.get("HEX_KEY");
@@ -44,5 +44,3 @@ const payload = await verify(jwt, HEX_KEY);
 console.log(payload) // {"username": "samandar"};
 
 ```
-
-# hwt
