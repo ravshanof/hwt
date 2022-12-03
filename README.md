@@ -36,7 +36,7 @@ const HEX_KEY = await hwt.generateHex();
 // const HEX_KEY = Deno.env.get("HEX_KEY");
 // const payload = {"username": "samandar"};
 
-const jwt = await sign(HEX_KEY, payload);
+const jwt = await hwt.sign(HEX_KEY, payload);
 
 ```
 
@@ -45,7 +45,7 @@ const jwt = await sign(HEX_KEY, payload);
 
 ```ts
 // const HEX_KEY = Deno.env.get("HEX_KEY");
-const payload = await verify(jwt, HEX_KEY); 
+const payload = await hwt.verify(jwt, HEX_KEY); 
 
 // console.log(payload); // {"username": "samandar"};
 
