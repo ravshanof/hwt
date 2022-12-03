@@ -1,8 +1,10 @@
 # hwt
 
-HMAC key is composed of the bytes represented by the hex string
 
 Create and verify JWTs with hex-based keys
+
+
+> HMAC key is composed of the bytes represented by the hex string
 
 
 ### Generate HexKey
@@ -38,7 +40,7 @@ const jwt = await sign(HEX_KEY, payload);
 ### Verify JWT
 
 ```ts
-import { sign } from 'https://deno.land/x/hwt/mod.ts';
+import { verify } from 'https://deno.land/x/hwt/mod.ts';
 
 const HEX_KEY = Deno.env.get("HEX_KEY");
 const payload = await verify(jwt, HEX_KEY); 
