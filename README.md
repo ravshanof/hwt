@@ -8,6 +8,7 @@ Create and verify JWTs with hex-based keys
 
 
 ### Generate HexKey
+Generate HMAC hex-key and save it in secure environment
 
 ```ts
 import { generateHex } from 'https://deno.land/x/hwt/mod.ts';
@@ -23,6 +24,7 @@ console.log(HEX_KEY);
 
 
 ```
+
 
 ### Sign JWT
 
