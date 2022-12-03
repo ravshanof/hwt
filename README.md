@@ -1,5 +1,7 @@
 # hwt
 
+HMAC key is composed of the bytes represented by the hex string
+
 Create and verify JWTs with hex-based keys
 
 
