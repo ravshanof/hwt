@@ -1,14 +1,15 @@
 import { bufferToHex, hexToBuffer } from "https://deno.land/x/hextools/mod.ts";
 import * as djwt from "https://deno.land/x/djwt@v2.8/mod.ts";
 
+export default { generateHex, sign, verify };
 
-export async function sign (hex, payload) {
+async function sign (hex, payload) {
   const key = await hexToKey(hex);
   const jwt = await djwt.create({ alg: "HS512", typ: "JWT" }, payload, key);
   return jwt
 }
 
-export async function verify (jwt, hex) {
+async function verify (jwt, hex) {
   const key = await hexToKey(hex);
   const payload = await djwt.verify(jwt, key); 
   return payload;
@@ -39,7 +40,7 @@ async function keyToHex (key) {
 
 }
 
-export async function generateHex () {
+async function generateHex () {
   const key = await generateKey();
   const hex = await keyToHex(key);
   return hex
