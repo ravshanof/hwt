@@ -14,7 +14,7 @@ import hwt from 'https://deno.land/x/hwt/mod.ts';
 ```
 
 
-### hwt.generateHex
+### Generate hex-key
 Generate HMAC hex-key and save it in secure environment
 
 ```ts
