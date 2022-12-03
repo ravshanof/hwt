@@ -6,7 +6,7 @@ Create and verify JWTs with hex-based keys
 
 > HMAC key is composed of the bytes represented by the hex string
 
-### Import hwt
+## Use
 ```ts
 
 import hwt from 'https://deno.land/x/hwt/mod.ts';
